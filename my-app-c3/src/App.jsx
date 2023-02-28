@@ -3,6 +3,8 @@ import React from 'react'
 import ClassComponent from '../componentes/ClassComponent'
 import FuncComponent from '../componentes/FuncComponente'
 import Card from '../componentes/Card'
+import Home from '../componentes/Home'
+
 
 function App() {
 
@@ -32,7 +34,7 @@ function App() {
         <ul> 
           {names.map(name =><li key={name}>{name} </li>)}
         </ul>
-
+        <Home/>
         <h2>Components</h2>
         <ClassComponent/>
         <FuncComponent/>

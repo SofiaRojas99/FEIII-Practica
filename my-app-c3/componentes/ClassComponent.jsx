@@ -1,10 +1,25 @@
-import React from 'react'
+import {Component} from 'react'
 
-export default class ClassComponent extends React.Component {
+export default class ClassComponent extends Component {
+    constructor(){
+        super()
+        this.state = {
+            name: 'Girlesa',
+            country: 'Colombia'
+        }
+
+        this.changeName = this.changeName.bind(this)
+    }
+    //setState() modificador del estado
+    changeName(){
+        if(this.state.name === 'Girlesa') {this.setState({name: 'Julieth'})}
+        else this.setState({name: 'Girlesa'})}
+
     render(){
         return(
             <div>
-                <h3>Componente de clase</h3>
+                <h3>{this.state.name}</h3>
+                <button onClick={this.changeName}>Cambiar el nombre</button>
             </div>
         )
     }
@@ -18,3 +33,5 @@ export default class ClassComponent extends React.Component {
 //export function logicaParaComponente(){
 
 //}
+
+//rcc es un comando rapido para crear componente de clase
